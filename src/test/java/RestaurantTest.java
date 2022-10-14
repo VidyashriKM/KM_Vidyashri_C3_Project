@@ -5,6 +5,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,4 +68,16 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //Failing TestCase: Get the Order Value of Selected food items
+    @Test
+    public void getOrderValue_of_Sweet_corn_soup_and_Vegetable_lasagne_should_return_388(){
+        //adding_Restaurant_and_Menu_Details();
+        ArrayList<String> menuItemNames = new ArrayList<String>();
+        for (Item menuItems : restaurant.getMenu()) {
+            menuItemNames.add(menuItems.getName());
+        }
+        int totalOrderValue = restaurant.getOrderValue(menuItemNames);
+        assertEquals(388,totalOrderValue);
+    }
 }
