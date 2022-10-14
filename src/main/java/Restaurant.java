@@ -70,4 +70,13 @@ public class Restaurant {
         return name;
     }
 
+    //New Feature added using TDD: Get the Order Value of Selected food items
+    public int getOrderValue(ArrayList<String> menuItemNames) {
+        int totalOrderValue = 0;
+        for (String itemName : menuItemNames) {
+            Item foodItem = this.findItemByName(itemName);
+            totalOrderValue = totalOrderValue + foodItem.getPrice();
+        }
+        return totalOrderValue;
+    }
 }

@@ -17,4 +17,9 @@ public class Item {
                 + "\n"
                 ;
     }
+
+    //Added to get price of the food Item
+    public int getPrice() {
+        return this.price;
+    }
 }

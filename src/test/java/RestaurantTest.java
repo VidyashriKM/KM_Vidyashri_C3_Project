@@ -69,7 +69,7 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    //Failing TestCase: Get the Order Value of Selected food items
+    //Testing New Feature added using TDD: Get the Order Value of Selected food items
     @Test
     public void getOrderValue_of_Sweet_corn_soup_and_Vegetable_lasagne_should_return_388(){
         //adding_Restaurant_and_Menu_Details();
